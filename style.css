@@ -32,6 +32,12 @@ main {
   display: flex;
   flex-direction: row;
   /* border: 1px solid black; */
+  flex-wrap: wrap;
+}
+
+main .image-section {
+  display: flex;
+  flex: 1;
 }
 
 main .text {
@@ -126,6 +132,7 @@ footer {
   justify-content: center;
   text-align: center;
   background-color: #9a809b;
+  
 }
 
 footer p {
@@ -137,6 +144,7 @@ footer section {
   display: flex;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 
@@ -153,4 +161,41 @@ footer section {
 ::-webkit-scrollbar-track {
   background: lightgrey; /* Color of the scrollbar track */
   border-radius: 6px; /* Roundness of the scrollbar track */
+} 
+
+@media screen and (max-width: 1040px) {
+  main {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  main .image-section {
+    order: 1;
+    justify-content: center;
+  }
+
+  main .text {
+    order: 2;
+    text-align: center;
+    padding-left: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .text button {
+    width: 80%;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 536px) {
+  .service {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .service {
+    padding: 0 40px;
+  }
 }
