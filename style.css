@@ -198,4 +198,20 @@ footer section {
   .service {
     padding: 0 40px;
   }
+
+  .woman {
+    max-width: 75%;
+    bottom: 80px;
+    left: 70px;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  header {
+    flex-direction: column;
+  }
+
+  .service {
+    padding: 0 30px;
+  }
 }
